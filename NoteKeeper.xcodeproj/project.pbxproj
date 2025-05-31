@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D0C6D0402DEB122100305977 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = D0C6D03F2DEB122100305977 /* FirebaseCore */; };
+		D0C6D0422DEB122100305977 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D0C6D0412DEB122100305977 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D0C6D0182DEB0FC000305977 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C6D0402DEB122100305977 /* FirebaseCore in Frameworks */,
+				D0C6D0422DEB122100305977 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = NoteKeeper;
 			packageProductDependencies = (
+				D0C6D03F2DEB122100305977 /* FirebaseCore */,
+				D0C6D0412DEB122100305977 /* FirebaseFirestore */,
 			);
 			productName = NoteKeeper;
 			productReference = D0C6D0072DEB0FBE00305977 /* NoteKeeper.app */;
@@ -195,6 +204,9 @@
 			);
 			mainGroup = D0C6CFFE2DEB0FBE00305977;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D0C6D03E2DEB122100305977 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D0C6D0082DEB0FBE00305977 /* Products */;
 			projectDirPath = "";
@@ -558,6 +570,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0C6D03E2DEB122100305977 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0C6D03F2DEB122100305977 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0C6D03E2DEB122100305977 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		D0C6D0412DEB122100305977 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0C6D03E2DEB122100305977 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0C6CFFF2DEB0FBE00305977 /* Project object */;
 }
