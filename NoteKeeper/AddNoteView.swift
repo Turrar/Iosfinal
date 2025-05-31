@@ -21,8 +21,10 @@ struct AddNoteView: View {
 
                 Section {
                     Button("Сақтау") {
-                        viewModel.addNote(title: title, content: content)
-                        dismiss()
+                        Task {
+                            await viewModel.addNote(title: title, content: content)
+                            dismiss()
+                        }
                     }
                     .disabled(title.isEmpty || content.isEmpty)
                 }
